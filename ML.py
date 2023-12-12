@@ -37,7 +37,7 @@ nlp = spacy.load("en_core_web_md")
 
 def analyze_review(text):
     text = nlp(text).vector
-    text = np.reshape((1,len(text)))
+    text = np.reshape(text,(1,len(text)))
     result = model(text)
     
     
