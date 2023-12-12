@@ -3,8 +3,8 @@ import pickle
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Conv1D, MaxPooling1D, LSTM, Dense, Dropout, Embedding, Bidirectional
 
-sequence_length = len(X_train)
-embedding_dim = len(X_train[0])
+sequence_length = 8000
+embedding_dim = 300
 
 model = Sequential()
 
