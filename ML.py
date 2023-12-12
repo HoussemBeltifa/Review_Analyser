@@ -1,4 +1,5 @@
 import pickle
+import numpy
 
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Conv1D, MaxPooling1D, LSTM, Dense, Dropout, Embedding, Bidirectional
@@ -36,7 +37,8 @@ nlp = spacy.load("en_core_web_md")
 
 def analyze_review(text):
     text = nlp(text).vector
+    text = np.reshape((1,len(text)))
+    result = model(text)
     
     
-    
-    return "Positive" if "good" in text.lower() else "Negative"
+    return "Positive" if result>0.5 else "Negative"
