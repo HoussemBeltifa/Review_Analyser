@@ -1,0 +1,10 @@
+streamlit-aggrid
+streamlit_extras.let_it_rain
+streamlit_extras
+streamlit
+numpy
+pandas
+tensorflow
+nltk
+spacy
+spacy_model_en_core_web_md
